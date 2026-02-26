@@ -1,0 +1,58 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache
+*.pyo
+*.pyd
+
+# Logs
+*.log
+*.log.*
+logs/
+
+# PostgreSQL
+*.sql
+*.dump
+*.backup
+pgdata/
+postgres-data/
+
+# Odoo runtime
+filestore/
+data_dir/
+
+# Docker
+docker-data/
+*.tar
+
+# Environment variables
+.env
+.env.*
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+
+# Test / coverage
+.coverage
+htmlcov/
+
+# Pytest
+.pytest_cache/
+
+# Migrations temp
+.migration/
+
+# Backup files
+*.bak
+*.tmp
