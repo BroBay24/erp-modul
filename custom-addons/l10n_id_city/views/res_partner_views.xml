@@ -5,11 +5,21 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+            <!-- Ganti field city (teks) dengan urutan City -> District -> Village -->
             <xpath expr="//field[@name='city']" position="replace">
+                <field name="village_id"
+                       placeholder="Kelurahan/Desa"
+                       domain="[('district_id', '=', district_id)]"
+                       options="{'no_create': True, 'no_open': True}"/>
+                <field name="district_id"
+                       placeholder="Kecamatan"
+                       domain="[('regency_id', '=', city_id)]"
+                       options="{'no_create': True, 'no_open': True}"/>
                 <field name="city_id"
                        placeholder="Kabupaten/Kota"
                        domain="[('state_id', '=', state_id), ('country_id', '=', country_id)]"
                        options="{'no_create': True, 'no_open': True}"/>
+                <!-- Tetap simpan field city (char) sebagai hidden agar kompatibilitas tidak rusak -->
                 <field name="city" invisible="1"/>
             </xpath>
         </field>

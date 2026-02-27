@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_res_city_public,res.city.public,base_address_extended.model_res_city,,1,0,0,0
 access_res_city_manager,res.city.manager,base_address_extended.model_res_city,base.group_system,1,1,1,1
+access_res_district_public,res.district.public,l10n_id_city.model_res_district,,1,0,0,0
+access_res_district_manager,res.district.manager,l10n_id_city.model_res_district,base.group_system,1,1,1,1
+access_res_village_public,res.village.public,l10n_id_city.model_res_village,,1,0,0,0
+access_res_village_manager,res.village.manager,l10n_id_city.model_res_village,base.group_system,1,1,1,1
